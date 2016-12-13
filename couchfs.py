@@ -354,7 +354,7 @@ class CouchFS(Fuse):
         logger.debug('called utime(%s, %s)', path, times)
 
 
-COUCHDB_URL = 'http://13.78.123.17:5984/'
+COUCHDB_URL = 'http://localhost:5984/'
 COUCHDB_NAME = 'couchfs'
 
 LOG_FORMAT = '[%(asctime)s] %(levelname)s:%(name)s:%(message)s'
