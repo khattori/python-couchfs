@@ -283,7 +283,7 @@ class CouchFS(Fuse):
         logger.debug('called read(%s, %s, %s)', path, size, offset)
         inode, _ = self._inodes[path]
         dblock = self._get_dblock(inode)
-        return dblock[offset:]
+        return dblock[offset:offset + size]
 
     @exc_handle
     def write(self, path, buf, offset):
